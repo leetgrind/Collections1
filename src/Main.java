@@ -1,9 +1,11 @@
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
+import java.util.Random;
 
 public class Main {
     public static void main(String[] args) {
-        arrayList();
+        arrayInteger();
     }
 
     public static void arrayList() {
@@ -27,8 +29,24 @@ public class Main {
         for(String element: stringList) {
             System.out.println(element);
         }
+    }
 
+    public static void arrayInteger() {
 
+        List<Integer> numList = new ArrayList<>();
+        Random random = new Random();
+
+        for(int i=0; i<10; i++) {
+            numList.add(random.nextInt(30));
+        }
+
+        numList.sort(Comparator.naturalOrder());
+
+        //numList.sort(Comparator.reverseOrder());
+
+        for (var num : numList) {
+            System.out.println(num);
+        }
 
     }
 }
