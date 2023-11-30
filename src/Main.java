@@ -1,7 +1,4 @@
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Random;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -40,7 +37,9 @@ public class Main {
             numList.add(random.nextInt(30));
         }
 
-        numList.sort(Comparator.naturalOrder());
+        //numList.sort(Comparator.naturalOrder());
+
+        Collections.sort(numList);
 
         //numList.sort(Comparator.reverseOrder());
 
